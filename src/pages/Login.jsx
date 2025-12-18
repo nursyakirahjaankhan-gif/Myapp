@@ -32,7 +32,7 @@ export default function Login() {
             <button type="submit" className="btn">Login</button>
             <p>or Login with social platforms</p>
             <div className="socialicons">
-              <a href="https://mail.google.com" target="_blank" rel="noopener noreferrer"><i class='bxl  bx-google'></i> </a>
+              <a href="https://accounts.google.com.my/" target="_blank" rel="noopener noreferrer"><i class='bxl  bx-google'></i> </a>
               <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i class='bxl  bx-facebook-square'></i> </a>
               <a href="https://www.github.com" target="_blank" rel="noopener noreferrer"><i class='bxl bx-github'></i></a>
               <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><i class='bxl  bx-linkedin-square'></i> </a>
@@ -58,7 +58,7 @@ export default function Login() {
             <button type="submit" className="btn">Register</button>
             <p>or register with social platforms</p>
             <div className="socialicons">
-              <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"><i class='bxl  bx-google'></i> </a>
+              <a href="https://accounts.google.com.my/" target="_blank" rel="noopener noreferrer"><i class='bxl  bx-google'></i> </a>
               <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i class='bxl  bx-facebook-square'></i> </a>
               <a href="https://www.github.com" target="_blank" rel="noopener noreferrer"><i class='bxl  bx-github'></i> </a>
               <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><i class='bxl  bx-linkedin-square'></i> </a>
@@ -83,3 +83,4 @@ export default function Login() {
   );
 
 }
+
