@@ -2,6 +2,10 @@
 @import url('https://cdn.boxicons.com/3.0.6/css/boxicons.min.css');
 @import url('https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css');
 @import url('https://cdn.boxicons.com/3.0.6/fonts/brands/boxicons-brands.min.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 :root {
   /* Minimalist Color Palette - High Contrast */
@@ -74,7 +78,8 @@ h1,
 h2,
 h3 {
   margin-top: 0;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 2rem;
   letter-spacing: -0.025em;
   color: var(--text-main);
 }
@@ -153,7 +158,7 @@ h3 {
   border: 1px solid #e6e9ef;
 }
 
-.service-card i{
+.service-card i {
   font-size: 25px;
 }
 
@@ -285,6 +290,7 @@ h3 {
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -508,6 +514,17 @@ input[type="submit"]:hover {
   padding: 20px;
 }
 
+.ticketing ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 16px 0;
+}
+
+.ticketing li {
+  margin-bottom: 8px;
+  color: var(--text-muted);
+}
+
 .page-report h1 {
   text-align: center;
   margin-bottom: 24px;
@@ -572,7 +589,7 @@ footer {
   width: 100%;
 }
 
-.container {
+.container-login {
   position: relative;
   width: 100%;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
@@ -628,13 +645,13 @@ footer {
   color: #1e293b;
 }
 
-.container.active .form-box.login {
+.container-login.active .form-box.login {
   z-index: 4;
   opacity: 0;
   pointer-events: none;
 }
 
-.container.active .form-box.register {
+.container-login.active .form-box.register {
   z-index: 5;
   opacity: 1;
   pointer-events: auto;
@@ -645,7 +662,7 @@ form {
   height: 90%;
 }
 
-.container h1 {
+.container-login h1 {
   font-size: 36px;
   margin: -10px 0;
 }
@@ -735,7 +752,7 @@ form {
   font-weight: 600;
 }
 
-.container p {
+.container-login p {
   font-size: 14.5px;
   margin: 15px 0;
 }
@@ -800,7 +817,7 @@ form {
   transition: 1.2s ease-in-out;
 }
 
-.container.active .toggle-box::before {
+.container-login.active .toggle-box::before {
   left: -50%;
 }
 
@@ -822,7 +839,7 @@ form {
   transition-delay: .6s;
 }
 
-.container.active .toggle-panel.toggle-left {
+.container-login.active .toggle-panel.toggle-left {
   left: -50%;
   transition-delay: .6s;
 }
@@ -832,13 +849,18 @@ form {
   transition-delay: .6s;
 }
 
-.container.active .toggle-panel.toggle-right {
+.container-login.active .toggle-panel.toggle-right {
   right: 0;
   transition-delay: .6s;
 }
 
-.toggle-panel.p {
+.toggle-panel p {
   margin-bottom: 20px;
+  color: #fff !important;
+}
+
+.toggle-panel h1 {
+  color: #fff !important;
 }
 
 .toggle-panel .btn {
@@ -1026,7 +1048,7 @@ form {
     padding: 20px 0;
   }
 
-  .container {
+  .container-login {
     height: 750px;
     /* Increased height to fit stacked form content */
     margin: 10px auto;
@@ -1062,7 +1084,7 @@ form {
     /* Reduce vertical spacing */
   }
 
-  .container.active .form-box {
+  .container-login.active .form-box {
     right: 0;
     bottom: 35%;
     /* Shift register form up */
@@ -1072,16 +1094,16 @@ form {
   .toggle-box::before {
     left: -4%;
     top: -265%;
-    /* Adjusted so visible part is 35% (300 - 265 = 35) */
+    /* Adjusted so visible part is 35% */
     width: 100%;
     height: 300%;
     border-radius: 0;
   }
 
-  .container.active .toggle-box::before {
+  .container-login.active .toggle-box::before {
     left: -4%;
     top: 65%;
-    /* Move blue background to bottom */
+    /* blue background to bottom */
   }
 
   .toggle-panel {
@@ -1096,7 +1118,7 @@ form {
 
   .toggle-panel h1 {
     font-size: 20px;
-    /* Smaller toggle text */
+    /* Smaller text */
   }
 
   .toggle-panel p {
@@ -1108,7 +1130,7 @@ form {
     top: 0;
   }
 
-  .container.active .toggle-panel.toggle-left {
+  .container-login.active .toggle-panel.toggle-left {
     left: 0;
     top: -50%;
     opacity: 0;
@@ -1119,7 +1141,7 @@ form {
     bottom: -35%;
   }
 
-  .container.active .toggle-panel.toggle-right {
+  .container-login.active .toggle-panel.toggle-right {
     bottom: 0;
   }
 
@@ -1142,5 +1164,4 @@ form {
   .social-links {
     justify-content: center;
   }
-
 }
